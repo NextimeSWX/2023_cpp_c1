@@ -1,12 +1,11 @@
 #include <iostream>
+#include <string>
 
 int main(void) 
 {
-    int nbr;
+    std::string str;
 
-    if (std::cin >> nbr) {
-        std::cout << "nbr contains: " << nbr << "\n";
-    } else {
-        std::cerr << "no int received\n";
+    while (std::cin >> str) {
+        std::cout << "str contains: " << str << "\n";
     }
 }
