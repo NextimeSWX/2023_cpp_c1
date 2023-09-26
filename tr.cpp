@@ -10,7 +10,6 @@ int verif(char token, std::string argv)
     auto iter{argv.begin()};
     while (iter != argv.end()) {
         if (token == *iter) {
-            //std::cout << i << "\n";
             return (i);
         }
         iter += 1;
