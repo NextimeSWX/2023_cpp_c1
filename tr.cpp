@@ -21,14 +21,16 @@ int verif(char token, std::string argv)
 int main(int argc, char **argv)
 {
     int         i{0};
+    int         j{0};
     std::string str;
     
     getline(std::cin, str, '\0');
     auto iter{str.begin()};
     if (argc == 3) {
         while (iter != str.end()) {
-            if (verif(*iter, argv[1]) >= 0) {
-                str[i] = argv[2][verif(*iter, argv[1])];
+            j = verif(*iter, argv[1]);
+            if (j >= 0) {
+                str[i] = argv[2][j];
             } else {
                 str[i] = str[i];
             }
