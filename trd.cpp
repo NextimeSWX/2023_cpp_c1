@@ -35,8 +35,6 @@ int main(int argc, char **argv)
                 }
             }
             std::cout << str << "\n";
-        } else {
-            return (-1);
         }
     }
     return (0);
