@@ -24,23 +24,21 @@ int main(int argc, char **argv)
     int         j{0};
     std::string str;
 
-    if (argc!= 3) {
+    if (argc != 3) {
         return (-1);
     }
     while (std::getline(std::cin, str)) {
         auto iter{str.begin()};
         i = 0;
-            while (iter != str.end()) {
-                j = verif(*iter, argv[1]);
-                if (j >= 0) {
-                    str[i] = argv[2][j];
-                } else {
-                    str[i] = str[i];
-                }
-                iter += 1;
-                i += 1;
+        while (iter != str.end()) {
+            j = verif(*iter, argv[1]);
+            if (j >= 0) {
+                str[i] = argv[2][j];
             }
-            std::cout << str << "\n";
+            iter += 1;
+            i += 1;
+        }
+        std::cout << str << "\n";
     }
     return (0);
 }
